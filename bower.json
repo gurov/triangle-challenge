@@ -1,0 +1,13 @@
+{
+  "name": "triangle-challenge",
+  "description": "",
+  "version": "0.0.1",
+  "homepage": "",
+  "license": "",
+  "private": false,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0"
+  }
+}
