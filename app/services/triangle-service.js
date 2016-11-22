@@ -14,14 +14,14 @@ function triangleService() {
 
     function isValidInput(s1, s2, s3) {
         return [s1, s2, s3].every(function (a) {
-            return angular.isNumber(a);
+            return angular.isNumber(a) && a <= Number.MAX_SAFE_INTEGER;
         });
     }
 
     function isValidTriangle(s1, s2, s3) {
         var sides = [s1, s2, s3].sort();
         var aboveZero = sides.every(function (a) {
-            return a > 0 && a < Infinity;
+            return a > 0;
         });
         return aboveZero && (sides[0] + sides[1] > sides[2]);
     }

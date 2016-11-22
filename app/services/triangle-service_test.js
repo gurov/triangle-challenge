@@ -12,14 +12,13 @@ describe('myApp module', function() {
             expect(triangleService.isValidInput(5, null, 3)).toEqual(false);
             expect(triangleService.isValidInput(5, 0, 3)).toEqual(true);
             expect(triangleService.isValidInput(5, 0, false)).toEqual(false);
-            expect(triangleService.isValidInput(5, 3, NaN)).toEqual(true);
-            expect(triangleService.isValidInput(Infinity, 3, NaN)).toEqual(true);
+            expect(triangleService.isValidInput(5, 3, NaN)).toEqual(false);
+            expect(triangleService.isValidInput(9007199254740990, 3, 3)).toEqual(true);
+            expect(triangleService.isValidInput(4, 9007199254740992, 3)).toEqual(false);
         }));
 
         it('should check valid of triangle', inject(function(triangleService) {
             expect(triangleService.isValidTriangle(1, 1, 1)).toEqual(true);
-            expect(triangleService.isValidTriangle(999999999999999, 999999999999998, 999999999999997)).toEqual(true);
-            expect(triangleService.isValidTriangle(Infinity, Infinity, Infinity)).toEqual(false);
             expect(triangleService.isValidTriangle(1, 1, 100)).toEqual(false);
             expect(triangleService.isValidTriangle(100, 102, -102)).toEqual(false);
             expect(triangleService.isValidTriangle(1, 2, 3)).toEqual(false);
