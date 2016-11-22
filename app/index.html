@@ -26,23 +26,23 @@
             <hr>
             <div class="row">
                 <div class="col-md-6">
-                    <form ng-init="sideA = sideB = sideC = 12" name="triangleForm">
+                    <form name="triangleForm">
                         <div class="form-group" ng-class="{'has-error': triangleForm.$invalid }">
                             <label>Side A</label>
                             <input type="number"
-                                   ng-model="sideA"
+                                   ng-model="triangle.sideA"
                                    class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Side B</label>
                             <input type="number"
-                                   ng-model="sideB"
+                                   ng-model="triangle.sideB"
                                    class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Side C</label>
                             <input type="number"
-                                   ng-model="sideC"
+                                   ng-model="triangle.sideC"
                                    class="form-control">
                         </div>
 
@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="well well-lg text-center">
-                        {{triangle.getTriangleType(sideA, sideB, sideC)}}
+                        {{triangle.getTriangleType(triangle.sideA, triangle.sideB, triangle.sideC)}}
                     </div>
                 </div>
             </div>

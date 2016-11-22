@@ -21,7 +21,7 @@ function triangleService() {
     function isValidTriangle(s1, s2, s3) {
         var sides = [s1, s2, s3].sort();
         var aboveZero = sides.every(function (a) {
-            return a > 0;
+            return a > 0 && a < Infinity;
         });
         return aboveZero && (sides[0] + sides[1] > sides[2]);
     }
