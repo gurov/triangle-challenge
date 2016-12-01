@@ -22,6 +22,7 @@ describe('myApp module', function() {
             expect(triangleService.isValidTriangle(1, 1, 100)).toEqual(false);
             expect(triangleService.isValidTriangle(100, 102, -102)).toEqual(false);
             expect(triangleService.isValidTriangle(1, 2, 3)).toEqual(false);
+            expect(triangleService.isValidTriangle(1, 123, 9)).toEqual(false);
             expect(triangleService.isValidTriangle(1.1, 2, 3)).toEqual(true);
         }));
 

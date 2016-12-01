@@ -19,7 +19,9 @@ function triangleService() {
     }
 
     function isValidTriangle(s1, s2, s3) {
-        var sides = [s1, s2, s3].sort();
+        var sides = [s1, s2, s3].sort(function (a, b) {
+            return a - b;
+        });
         var aboveZero = sides.every(function (a) {
             return a > 0;
         });
